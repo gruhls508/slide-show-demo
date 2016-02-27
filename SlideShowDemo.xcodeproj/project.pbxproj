@@ -68,17 +68,15 @@
 		511EAAF81C82405000CCB6CC /* SlideShowDemo */ = {
 			isa = PBXGroup;
 			children = (
+				511EAB131C826D0C00CCB6CC /* IB Files */,
+				511EAB141C826D1900CCB6CC /* Utilities */,
+				511EAAF91C82405000CCB6CC /* Supporting Files */,
 				511EAB101C826C3700CCB6CC /* AnimatingImageView.h */,
 				511EAB111C826C3700CCB6CC /* AnimatingImageView.m */,
 				511EAAFC1C82405000CCB6CC /* AppDelegate.h */,
 				511EAAFD1C82405000CCB6CC /* AppDelegate.m */,
 				511EAAFF1C82405000CCB6CC /* ViewController.h */,
 				511EAB001C82405000CCB6CC /* ViewController.m */,
-				511EAB021C82405000CCB6CC /* Main.storyboard */,
-				511EAB051C82405000CCB6CC /* Assets.xcassets */,
-				511EAB071C82405000CCB6CC /* LaunchScreen.storyboard */,
-				511EAB0A1C82405000CCB6CC /* Info.plist */,
-				511EAAF91C82405000CCB6CC /* Supporting Files */,
 			);
 			path = SlideShowDemo;
 			sourceTree = "<group>";
@@ -89,6 +87,24 @@
 				511EAAFA1C82405000CCB6CC /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		511EAB131C826D0C00CCB6CC /* IB Files */ = {
+			isa = PBXGroup;
+			children = (
+				511EAB021C82405000CCB6CC /* Main.storyboard */,
+				511EAB071C82405000CCB6CC /* LaunchScreen.storyboard */,
+			);
+			name = "IB Files";
+			sourceTree = "<group>";
+		};
+		511EAB141C826D1900CCB6CC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				511EAB051C82405000CCB6CC /* Assets.xcassets */,
+				511EAB0A1C82405000CCB6CC /* Info.plist */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		B5C9AB62FD3378EFEBF95B14 /* Frameworks */ = {

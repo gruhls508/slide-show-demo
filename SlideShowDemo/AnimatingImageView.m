@@ -2,7 +2,7 @@
 //  AnimatingImageView.m
 //  toolbox
 //
-//  Created by Glen Ruhl on 1/20/15.
+//  Created by Glen Ruhl on 2/27/16.
 //  Copyright (c) 2015 intradine. All rights reserved.
 //
 
@@ -58,7 +58,7 @@ const float AIV_ANIMATION_INTERVAL = 2.25;
 
 
 
-
+    //  Thinking this will be replaced by a delegate
 //    [[NSNotificationCenter defaultCenter] postNotificationName:kslideShowReady object:_slideShow];
 }
 
