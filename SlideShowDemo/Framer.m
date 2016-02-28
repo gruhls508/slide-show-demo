@@ -11,7 +11,7 @@
 
 @implementation Framer
 
-- (CGRect)frameForImageView:(UIImageView *)imageView {
++ (CGRect)frameForImageView:(UIImageView *)imageView {
 
     CGRect viewFrame = imageView.frame;
     CGRect superFrame = imageView.superview.frame;
@@ -39,7 +39,7 @@
     viewOriginY = viewOriginY == desiredOriginY ? viewOriginY :
                                                 desiredOriginY;
 
-    
+
 
 
     return viewFrame;
