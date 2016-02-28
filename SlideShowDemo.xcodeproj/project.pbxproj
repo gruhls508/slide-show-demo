@@ -15,6 +15,7 @@
 		511EAB061C82405000CCB6CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 511EAB051C82405000CCB6CC /* Assets.xcassets */; };
 		511EAB091C82405000CCB6CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511EAB071C82405000CCB6CC /* LaunchScreen.storyboard */; };
 		511EAB121C826C3700CCB6CC /* AnimatingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 511EAB111C826C3700CCB6CC /* AnimatingImageView.m */; };
+		511EAB181C8272AB00CCB6CC /* Framer.m in Sources */ = {isa = PBXBuildFile; fileRef = 511EAB171C8272AB00CCB6CC /* Framer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		511EAB0A1C82405000CCB6CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		511EAB101C826C3700CCB6CC /* AnimatingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatingImageView.h; sourceTree = "<group>"; };
 		511EAB111C826C3700CCB6CC /* AnimatingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatingImageView.m; sourceTree = "<group>"; };
+		511EAB161C8272AB00CCB6CC /* Framer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Framer.h; sourceTree = "<group>"; };
+		511EAB171C8272AB00CCB6CC /* Framer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Framer.m; sourceTree = "<group>"; };
 		D8F23ECDDA6E2A936C710A98 /* Pods-SlideShowDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideShowDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlideShowDemo/Pods-SlideShowDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E3777041B1E43098DE10DD9F /* Pods-SlideShowDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideShowDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlideShowDemo/Pods-SlideShowDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,13 +71,11 @@
 		511EAAF81C82405000CCB6CC /* SlideShowDemo */ = {
 			isa = PBXGroup;
 			children = (
+				511EAB151C82727000CCB6CC /* App Delegate */,
 				511EAB131C826D0C00CCB6CC /* IB Files */,
 				511EAB141C826D1900CCB6CC /* Utilities */,
 				511EAAF91C82405000CCB6CC /* Supporting Files */,
-				511EAB101C826C3700CCB6CC /* AnimatingImageView.h */,
-				511EAB111C826C3700CCB6CC /* AnimatingImageView.m */,
-				511EAAFC1C82405000CCB6CC /* AppDelegate.h */,
-				511EAAFD1C82405000CCB6CC /* AppDelegate.m */,
+				511EAB191C82734A00CCB6CC /* View Class Files */,
 				511EAAFF1C82405000CCB6CC /* ViewController.h */,
 				511EAB001C82405000CCB6CC /* ViewController.m */,
 			);
@@ -105,6 +106,26 @@
 				511EAB0A1C82405000CCB6CC /* Info.plist */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		511EAB151C82727000CCB6CC /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				511EAAFC1C82405000CCB6CC /* AppDelegate.h */,
+				511EAAFD1C82405000CCB6CC /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		511EAB191C82734A00CCB6CC /* View Class Files */ = {
+			isa = PBXGroup;
+			children = (
+				511EAB101C826C3700CCB6CC /* AnimatingImageView.h */,
+				511EAB111C826C3700CCB6CC /* AnimatingImageView.m */,
+				511EAB161C8272AB00CCB6CC /* Framer.h */,
+				511EAB171C8272AB00CCB6CC /* Framer.m */,
+			);
+			name = "View Class Files";
 			sourceTree = "<group>";
 		};
 		B5C9AB62FD3378EFEBF95B14 /* Frameworks */ = {
@@ -249,6 +270,7 @@
 				511EAB121C826C3700CCB6CC /* AnimatingImageView.m in Sources */,
 				511EAAFE1C82405000CCB6CC /* AppDelegate.m in Sources */,
 				511EAAFB1C82405000CCB6CC /* main.m in Sources */,
+				511EAB181C8272AB00CCB6CC /* Framer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

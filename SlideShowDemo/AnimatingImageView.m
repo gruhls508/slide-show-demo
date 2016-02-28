@@ -58,7 +58,12 @@ const float AIV_ANIMATION_INTERVAL = 2.25;
 
 
 
-    //  Thinking this will be replaced by a delegate
+    //  Thinking this will be replaced by a delegate. Will check use of note observation in original
+    //  to ensure this will be appropriate.
+
+
+    //  UPDATE: Actually, shouldn't be necessary since slideShow is not being hidden or brought to front
+    //  on view. 
 //    [[NSNotificationCenter defaultCenter] postNotificationName:kslideShowReady object:_slideShow];
 }
 
