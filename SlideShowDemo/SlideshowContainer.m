@@ -14,43 +14,29 @@
     NSTimer *timer;
     NSArray *privateImageArray;
 }
-
-const float AIV_ANIMATION_DURATION = 0.50;
-// this const is declared in UIView+ShowOrHide Category, prefixed here with AIV_
-const float AIV_ANIMATION_INTERVAL = 2.25;
+const float AIV_ANIMATION_DURATION = 0.54f;
+const float AIV_ANIMATION_INTERVAL = 2.3f;
 
 
 - (void)animateWithImages:(NSArray *)imageArray{
-    NSLog(@"-animateWithImages:");
-
     privateImageArray = imageArray;
     
     _slideShow.delegate = self;
-
-
-
-
-
-//    _slideShow = [[KASlideShow alloc] initWithFrame:self.frame];
-
-
-
-
-
-
-
     _slideShow.layer.cornerRadius = self.layer.cornerRadius;
 
     [_slideShow setDelay:1.0];
     [_slideShow setTransitionDuration:AIV_ANIMATION_DURATION];
     [_slideShow setTransitionType:KASlideShowTransitionFade];
-    [_slideShow setImagesContentMode:UIViewContentModeScaleAspectFit];
+
+
+    //  This works well for 6+ size/resolution. May need to change depending on device.
+    [_slideShow setImagesContentMode:UIViewContentModeScaleToFill];
+
     for (i = 0; i < privateImageArray.count; i ++) {
         
         UIImage *imageForSlide = [[privateImageArray objectAtIndex:i]isKindOfClass:[UIImage class]] ?
                                   [privateImageArray objectAtIndex:i] :
                                                                    nil;
-        
         if (imageForSlide) {
             [_slideShow addImage:imageForSlide];
         } else {
@@ -66,23 +52,7 @@ const float AIV_ANIMATION_INTERVAL = 2.25;
                                             repeats:YES];
     
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
-
-
-
-    //  Thinking this will be replaced by a delegate. Will check use of note observation in original
-    //  to ensure this will be appropriate.
-
-
-    //  UPDATE: Actually, shouldn't be necessary since slideShow is not being hidden or brought to front
-    //  on view. 
-//    [[NSNotificationCenter defaultCenter] postNotificationName:kslideShowReady object:_slideShow];
 }
-
-
-
-
-
-
 
 
 - (void)slideshowtransition:(NSTimer *)timer {
@@ -99,5 +69,6 @@ const float AIV_ANIMATION_INTERVAL = 2.25;
         nil;
     }
 }
+
 
 @end
