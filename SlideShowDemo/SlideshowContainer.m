@@ -34,9 +34,10 @@ const float AIV_ANIMATION_INTERVAL = 2.3f;
 
     for (i = 0; i < privateImageArray.count; i ++) {
         
-        UIImage *imageForSlide = [[privateImageArray objectAtIndex:i]isKindOfClass:[UIImage class]] ?
-                                  [privateImageArray objectAtIndex:i] :
-                                                                   nil;
+        UIImage *imageForSlide = [[privateImageArray objectAtIndex:i]
+                                     isKindOfClass:[UIImage class]] ?
+                                [privateImageArray objectAtIndex:i] :
+                                                                 nil;
         if (imageForSlide) {
             [_slideShow addImage:imageForSlide];
         } else {
