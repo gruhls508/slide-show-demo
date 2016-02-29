@@ -26,7 +26,18 @@ const float AIV_ANIMATION_INTERVAL = 2.25;
     privateImageArray = imageArray;
     
     _slideShow.delegate = self;
-    _slideShow = [[KASlideShow alloc] initWithFrame:self.frame];
+
+
+
+
+
+//    _slideShow = [[KASlideShow alloc] initWithFrame:self.frame];
+
+
+
+
+
+
 
     _slideShow.layer.cornerRadius = self.layer.cornerRadius;
 
