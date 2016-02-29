@@ -14,7 +14,7 @@
 		511EAB041C82405000CCB6CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511EAB021C82405000CCB6CC /* Main.storyboard */; };
 		511EAB061C82405000CCB6CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 511EAB051C82405000CCB6CC /* Assets.xcassets */; };
 		511EAB091C82405000CCB6CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511EAB071C82405000CCB6CC /* LaunchScreen.storyboard */; };
-		511EAB121C826C3700CCB6CC /* AnimatingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 511EAB111C826C3700CCB6CC /* AnimatingImageView.m */; };
+		511EAB121C826C3700CCB6CC /* SlideshowContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 511EAB111C826C3700CCB6CC /* SlideshowContainer.m */; };
 		511EAB181C8272AB00CCB6CC /* Framer.m in Sources */ = {isa = PBXBuildFile; fileRef = 511EAB171C8272AB00CCB6CC /* Framer.m */; };
 /* End PBXBuildFile section */
 
@@ -30,8 +30,8 @@
 		511EAB051C82405000CCB6CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		511EAB081C82405000CCB6CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		511EAB0A1C82405000CCB6CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		511EAB101C826C3700CCB6CC /* AnimatingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatingImageView.h; sourceTree = "<group>"; };
-		511EAB111C826C3700CCB6CC /* AnimatingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatingImageView.m; sourceTree = "<group>"; };
+		511EAB101C826C3700CCB6CC /* SlideshowContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideshowContainer.h; sourceTree = "<group>"; };
+		511EAB111C826C3700CCB6CC /* SlideshowContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideshowContainer.m; sourceTree = "<group>"; };
 		511EAB161C8272AB00CCB6CC /* Framer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Framer.h; sourceTree = "<group>"; };
 		511EAB171C8272AB00CCB6CC /* Framer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Framer.m; sourceTree = "<group>"; };
 		D8F23ECDDA6E2A936C710A98 /* Pods-SlideShowDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideShowDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlideShowDemo/Pods-SlideShowDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,8 +120,8 @@
 		511EAB191C82734A00CCB6CC /* View Class Files */ = {
 			isa = PBXGroup;
 			children = (
-				511EAB101C826C3700CCB6CC /* AnimatingImageView.h */,
-				511EAB111C826C3700CCB6CC /* AnimatingImageView.m */,
+				511EAB101C826C3700CCB6CC /* SlideshowContainer.h */,
+				511EAB111C826C3700CCB6CC /* SlideshowContainer.m */,
 				511EAB161C8272AB00CCB6CC /* Framer.h */,
 				511EAB171C8272AB00CCB6CC /* Framer.m */,
 			);
@@ -267,7 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				511EAB011C82405000CCB6CC /* ViewController.m in Sources */,
-				511EAB121C826C3700CCB6CC /* AnimatingImageView.m in Sources */,
+				511EAB121C826C3700CCB6CC /* SlideshowContainer.m in Sources */,
 				511EAAFE1C82405000CCB6CC /* AppDelegate.m in Sources */,
 				511EAAFB1C82405000CCB6CC /* main.m in Sources */,
 				511EAB181C8272AB00CCB6CC /* Framer.m in Sources */,

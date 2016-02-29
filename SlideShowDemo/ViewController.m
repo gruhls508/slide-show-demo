@@ -7,38 +7,40 @@
 //
 
 #import "ViewController.h"
-#import "AnimatingImageView.h"
+#import "SlideshowContainer.h"
 #import "Framer.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet AnimatingImageView *imageView;
+@property (weak, nonatomic) IBOutlet SlideshowContainer *container;
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
 
-
-
+    KASlideShow *slideshow;
+}
 
 - (void)viewDidLayoutSubviews {
 
-
-    _imageView.frame = [Framer frameForImageView:_imageView];
-    NSLog(@"_imageView == %@", _imageView);
-//    _imageView.backgroundColor = [UIColor groupTableViewBackgroundColor];
-
+    _container.frame = [Framer frameForContainer:_container];
+    _container.slideShow.frame = _container.frame;
+    NSLog(@"_container == %@", _container);
 }
-
-
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    UIImage *image1 = [UIImage imageNamed:@"TV-Face-Swap"];
+    UIImage *image2 = [UIImage imageNamed:@"guy_and_girl"];
+    UIImage *image3 = [UIImage imageNamed:@"baby_and_dude"];
 
+    NSArray *images = @[image1, image2, image3];
 
+    [_container animateWithImages:images];
 
-
+    NSLog(@"_container.slideshow == %@", _container.slideShow);
+    [self.view addSubview:_container.slideShow];
 }
 
 

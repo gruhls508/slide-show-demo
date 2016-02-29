@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 intradine. All rights reserved.
 //
 
-#import "AnimatingImageView.h"
+#import "SlideshowContainer.h"
 
-@implementation AnimatingImageView {
+@implementation SlideshowContainer {
     
     int i;
     NSTimer *timer;
@@ -21,19 +21,19 @@ const float AIV_ANIMATION_INTERVAL = 2.25;
 
 
 - (void)animateWithImages:(NSArray *)imageArray{
-    
+    NSLog(@"-animateWithImages:");
+
     privateImageArray = imageArray;
     
     _slideShow.delegate = self;
     _slideShow = [[KASlideShow alloc] initWithFrame:self.frame];
 
     _slideShow.layer.cornerRadius = self.layer.cornerRadius;
-    _slideShow.hidden = YES;
-    
+
     [_slideShow setDelay:1.0];
     [_slideShow setTransitionDuration:AIV_ANIMATION_DURATION];
     [_slideShow setTransitionType:KASlideShowTransitionFade];
-    [_slideShow setImagesContentMode:UIViewContentModeScaleAspectFill];
+    [_slideShow setImagesContentMode:UIViewContentModeScaleAspectFit];
     for (i = 0; i < privateImageArray.count; i ++) {
         
         UIImage *imageForSlide = [[privateImageArray objectAtIndex:i]isKindOfClass:[UIImage class]] ?

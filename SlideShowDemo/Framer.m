@@ -8,12 +8,13 @@
 
 #import "Framer.h"
 
+
 @implementation Framer
 
-+ (CGRect)frameForImageView:(UIImageView *)imageView {
++ (CGRect)frameForContainer:(UIView *)container {
 
-    CGRect viewFrame = imageView.frame;
-    CGRect superFrame = imageView.superview.frame;
+    CGRect viewFrame = container.frame;
+    CGRect superFrame = container.superview.frame;
     CGSize superSize = superFrame.size;
 
     CGFloat superWidth = superSize.width;
@@ -44,14 +45,6 @@
     viewWidth = viewWidth == desiredWidth ? viewWidth :
                                           desiredWidth;
 
-
-
-
-    NSLog(@"viewWidth == %f, superview == %@", viewWidth, imageView.superview);
-
-
-
-
     viewHeight = viewHeight == desiredHeight ? viewHeight :
                                              desiredHeight;
 
@@ -63,7 +56,20 @@
 }
 
 
++ (CGRect)frameForSlideShow:(KASlideShow *)slideshow {
 
+    //  Need to zero out slideshow's origin so that it matches its superview's (container)
+
+    CGRect slideshowFrame = slideshow.frame;
+    CGPoint slideshowOrigin = slideshowFrame.origin;
+
+    slideshowFrame.origin = CGPointEqualToPoint(slideshowOrigin, CGPointZero) ? slideshowOrigin :
+                                                                                     CGPointZero;
+
+    
+
+    return slideshowFrame;
+}
 
 
 @end

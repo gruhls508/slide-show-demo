@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
+#import "KASlideShow.h"
 
 @interface Framer : NSObject
 
-+ (CGRect)frameForImageView:(UIImageView *)imageView;
++ (CGRect)frameForContainer:(UIView *)container;
 
 @end

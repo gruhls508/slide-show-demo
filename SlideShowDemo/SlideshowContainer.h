@@ -9,12 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "KASlideShow.h"
-//#import "VCConstants.h"
-//#import "UIView+FrameSubviews.h"
+
 
 @class UIView;
 
-@interface AnimatingImageView : UIImageView
+@interface SlideshowContainer : UIView
 <KASlideShowDelegate>
 
 @property BOOL keepAnimating;
