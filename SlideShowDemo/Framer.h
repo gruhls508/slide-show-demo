@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 
 @interface Framer : NSObject
+
++ (CGRect)frameForImageView:(UIImageView *)imageView;
 
 @end

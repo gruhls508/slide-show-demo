@@ -7,7 +7,6 @@
 //
 
 #import "Framer.h"
-#import <UIKit/UIKit.h>
 
 @implementation Framer
 
@@ -23,11 +22,14 @@
     CGPoint viewOrigin = viewFrame.origin;
     CGSize viewSize = viewFrame.size;
 
-    CGFloat desiredOriginX = superWidth * .2f;
-    CGFloat desiredOriginY = superHeight * .15f;
+    CGFloat viewWidth = viewSize.width;
+    CGFloat viewHeight = viewSize.height;
+
+    CGFloat desiredOriginX = superWidth * .11f;
+    CGFloat desiredOriginY = superHeight * .09f;
 
     CGFloat desiredWidth = superWidth - (desiredOriginX * 2);
-    CGFloat desiredHeight = superHeight - (desiredOriginY * 2);
+    CGFloat desiredHeight = superHeight * .26f;
 
 
     CGFloat viewOriginX = viewOrigin.x;
@@ -39,9 +41,24 @@
     viewOriginY = viewOriginY == desiredOriginY ? viewOriginY :
                                                 desiredOriginY;
 
+    viewWidth = viewWidth == desiredWidth ? viewWidth :
+                                          desiredWidth;
 
 
 
+
+    NSLog(@"viewWidth == %f, superview == %@", viewWidth, imageView.superview);
+
+
+
+
+    viewHeight = viewHeight == desiredHeight ? viewHeight :
+                                             desiredHeight;
+
+    CGRect desiredFrame = CGRectMake(viewOriginX, viewOriginY, viewWidth, viewHeight);
+
+    viewFrame = CGRectEqualToRect(viewFrame, desiredFrame) ? viewFrame :
+                                                           desiredFrame;
     return viewFrame;
 }
 
