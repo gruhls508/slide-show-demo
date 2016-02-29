@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "SlideshowContainer.h"
 #import "Framer.h"
+#import "UIView+translateMask.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet SlideshowContainer *container;
@@ -22,8 +23,18 @@
 
 - (void)viewDidLayoutSubviews {
 
+
+    //  Set 'slideshow' to _container.slideshow here
+
+    [_container setTranslatesAutoresizingMaskIntoConstraints:NO];
+
     _container.frame = [Framer frameForContainer:_container];
     _container.slideShow.frame = _container.frame;
+//    _container.slideShow.frame = [Framer frameForSlideShow:_container.slideShow];
+
+
+
+
     NSLog(@"_container == %@", _container);
 }
 

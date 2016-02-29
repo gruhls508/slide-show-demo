@@ -16,6 +16,7 @@
 		511EAB091C82405000CCB6CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511EAB071C82405000CCB6CC /* LaunchScreen.storyboard */; };
 		511EAB121C826C3700CCB6CC /* SlideshowContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 511EAB111C826C3700CCB6CC /* SlideshowContainer.m */; };
 		511EAB181C8272AB00CCB6CC /* Framer.m in Sources */ = {isa = PBXBuildFile; fileRef = 511EAB171C8272AB00CCB6CC /* Framer.m */; };
+		51C780551C84BFD600187129 /* UIView+translateMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C780541C84BFD600187129 /* UIView+translateMask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		511EAB111C826C3700CCB6CC /* SlideshowContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideshowContainer.m; sourceTree = "<group>"; };
 		511EAB161C8272AB00CCB6CC /* Framer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Framer.h; sourceTree = "<group>"; };
 		511EAB171C8272AB00CCB6CC /* Framer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Framer.m; sourceTree = "<group>"; };
+		51C780531C84BFD600187129 /* UIView+translateMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+translateMask.h"; sourceTree = "<group>"; };
+		51C780541C84BFD600187129 /* UIView+translateMask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+translateMask.m"; sourceTree = "<group>"; };
 		D8F23ECDDA6E2A936C710A98 /* Pods-SlideShowDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideShowDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlideShowDemo/Pods-SlideShowDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E3777041B1E43098DE10DD9F /* Pods-SlideShowDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideShowDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlideShowDemo/Pods-SlideShowDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +127,8 @@
 				511EAB111C826C3700CCB6CC /* SlideshowContainer.m */,
 				511EAB161C8272AB00CCB6CC /* Framer.h */,
 				511EAB171C8272AB00CCB6CC /* Framer.m */,
+				51C780531C84BFD600187129 /* UIView+translateMask.h */,
+				51C780541C84BFD600187129 /* UIView+translateMask.m */,
 			);
 			name = "View Class Files";
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				511EAB011C82405000CCB6CC /* ViewController.m in Sources */,
+				51C780551C84BFD600187129 /* UIView+translateMask.m in Sources */,
 				511EAB121C826C3700CCB6CC /* SlideshowContainer.m in Sources */,
 				511EAAFE1C82405000CCB6CC /* AppDelegate.m in Sources */,
 				511EAAFB1C82405000CCB6CC /* main.m in Sources */,

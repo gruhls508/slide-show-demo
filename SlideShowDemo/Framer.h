@@ -13,5 +13,6 @@
 @interface Framer : NSObject
 
 + (CGRect)frameForContainer:(UIView *)container;
++ (CGRect)frameForSlideShow:(KASlideShow *)slideshow;
 
 @end

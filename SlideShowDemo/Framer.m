@@ -26,11 +26,11 @@
     CGFloat viewWidth = viewSize.width;
     CGFloat viewHeight = viewSize.height;
 
-    CGFloat desiredOriginX = superWidth * .11f;
+    CGFloat desiredOriginX = superWidth * .15f;
     CGFloat desiredOriginY = superHeight * .09f;
 
     CGFloat desiredWidth = superWidth - (desiredOriginX * 2);
-    CGFloat desiredHeight = superHeight * .26f;
+    CGFloat desiredHeight = superHeight * .32f;
 
 
     CGFloat viewOriginX = viewOrigin.x;
@@ -62,12 +62,18 @@
 
     CGRect slideshowFrame = slideshow.frame;
     CGPoint slideshowOrigin = slideshowFrame.origin;
+    CGFloat slideshowOriginX = slideshowOrigin.x;
 
-    slideshowFrame.origin = CGPointEqualToPoint(slideshowOrigin, CGPointZero) ? slideshowOrigin :
-                                                                                     CGPointZero;
+    slideshowOriginX = slideshowOriginX == 0 ? slideshowOriginX :
+                                                               0;
+    slideshowOrigin.x = slideshowOriginX;
 
-    
 
+
+//    slideshowOrigin = CGPointEqualToPoint(slideshowOrigin, CGPointZero) ? slideshowOrigin :
+//                                                                               CGPointZero;
+
+    slideshowFrame.origin = slideshowOrigin;
     return slideshowFrame;
 }
 
