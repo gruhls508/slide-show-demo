@@ -11,6 +11,84 @@
 
 @implementation Framer
 
+
++ (CGRect)frameForTitleLabel:(UILabel *)label {
+
+
+    //  Make 'sizedToFit' call and set label's SIZE
+    //  equal to that of the frame generated *by that method*
+
+    CGRect labelFrame = label.frame;
+    CGRect superFrame = label.superview.frame;
+    CGPoint superOrigin = superFrame.origin;
+    CGSize superSize = superFrame.size;
+
+    CGFloat superWidth = superSize.width;
+    CGFloat superHeight = superSize.height;
+
+    CGPoint labelOrigin = labelFrame.origin;
+    CGFloat labelOriginX = labelOrigin.x;
+    CGFloat labelOriginY = labelOrigin.y;
+
+
+
+
+
+
+    CGFloat desiredOriginX = superWidth * .15f;
+
+
+
+
+
+    CGFloat desiredOriginY = superHeight * .06f;
+
+
+    labelOriginX = labelOriginX == desiredOriginX ? labelOriginX :
+                                                   desiredOriginX;
+
+
+    labelOriginY = labelOriginY == desiredOriginY ? labelOriginY :
+                                                   desiredOriginY;
+
+    labelFrame.origin = CGPointMake(labelOriginX, labelOriginY);
+    labelFrame.size = [Framer fittedSizeForLabel:label];
+
+    return labelFrame;
+}
+
+
+
+
+
++ (CGSize)fittedSizeForLabel:(UILabel *)label {
+
+    UILabel *dummyLabel = [UILabel new];
+    dummyLabel.text = label.text;
+    dummyLabel.font = label.font;
+
+
+
+
+
+
+
+    NSLog(@"dummyLabel == %@", dummyLabel);
+
+    [dummyLabel sizeToFit];
+
+    CGSize actualLabelSize = label.frame.size;
+    CGSize dummyLabelSize = dummyLabel.frame.size;
+
+    if (CGSizeEqualToSize(actualLabelSize, dummyLabelSize))
+        return actualLabelSize;
+    else
+        return dummyLabelSize;
+}
+
+
+
+
 + (CGRect)frameForContainer:(UIView *)container {
 
     CGRect viewFrame = container.frame;
@@ -27,7 +105,7 @@
     CGFloat viewHeight = viewSize.height;
 
     CGFloat desiredOriginX = superWidth * .15f;
-    CGFloat desiredOriginY = superHeight * .09f;
+    CGFloat desiredOriginY = superHeight * .15f;
 
     CGFloat desiredWidth = superWidth - (desiredOriginX * 2);
     CGFloat desiredHeight = superHeight * .32f;

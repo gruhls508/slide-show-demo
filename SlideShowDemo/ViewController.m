@@ -11,6 +11,7 @@
 #import "Framer.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet SlideshowContainer *container;
 
 @end
@@ -22,6 +23,9 @@
 
 - (void)viewDidLayoutSubviews {
 
+    _titleLabel.frame = [Framer frameForTitleLabel:_titleLabel];
+
+    //  -setTranslatesAutoresizing.. may need to be called on all subviews of self.view
     [_container setTranslatesAutoresizingMaskIntoConstraints:NO];
     _container.frame = [Framer frameForContainer:_container];
 

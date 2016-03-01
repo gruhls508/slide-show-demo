@@ -12,6 +12,7 @@
 
 @interface Framer : NSObject
 
++ (CGRect)frameForTitleLabel:(UILabel *)label;
 + (CGRect)frameForContainer:(UIView *)container;
 + (CGRect)frameForSlideShow:(KASlideShow *)slideshow;
 
