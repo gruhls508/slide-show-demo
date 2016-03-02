@@ -16,6 +16,7 @@
 		511EAB091C82405000CCB6CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511EAB071C82405000CCB6CC /* LaunchScreen.storyboard */; };
 		511EAB121C826C3700CCB6CC /* SlideshowContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 511EAB111C826C3700CCB6CC /* SlideshowContainer.m */; };
 		511EAB181C8272AB00CCB6CC /* Framer.m in Sources */ = {isa = PBXBuildFile; fileRef = 511EAB171C8272AB00CCB6CC /* Framer.m */; };
+		51C7805A1C866CB200187129 /* UILabel+ChangeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C780591C866CB200187129 /* UILabel+ChangeColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		511EAB111C826C3700CCB6CC /* SlideshowContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideshowContainer.m; sourceTree = "<group>"; };
 		511EAB161C8272AB00CCB6CC /* Framer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Framer.h; sourceTree = "<group>"; };
 		511EAB171C8272AB00CCB6CC /* Framer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Framer.m; sourceTree = "<group>"; };
+		51C780581C866CB200187129 /* UILabel+ChangeColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ChangeColor.h"; sourceTree = "<group>"; };
+		51C780591C866CB200187129 /* UILabel+ChangeColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ChangeColor.m"; sourceTree = "<group>"; };
 		D8F23ECDDA6E2A936C710A98 /* Pods-SlideShowDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideShowDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlideShowDemo/Pods-SlideShowDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E3777041B1E43098DE10DD9F /* Pods-SlideShowDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideShowDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlideShowDemo/Pods-SlideShowDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,7 +78,7 @@
 				511EAB131C826D0C00CCB6CC /* IB Files */,
 				511EAB141C826D1900CCB6CC /* Utilities */,
 				511EAAF91C82405000CCB6CC /* Supporting Files */,
-				511EAB191C82734A00CCB6CC /* View Class Files */,
+				51C780561C866BBC00187129 /* View Files */,
 				511EAAFF1C82405000CCB6CC /* ViewController.h */,
 				511EAB001C82405000CCB6CC /* ViewController.m */,
 			);
@@ -126,6 +129,24 @@
 				511EAB171C8272AB00CCB6CC /* Framer.m */,
 			);
 			name = "View Class Files";
+			sourceTree = "<group>";
+		};
+		51C780561C866BBC00187129 /* View Files */ = {
+			isa = PBXGroup;
+			children = (
+				51C780571C866BD900187129 /* View Categories */,
+				511EAB191C82734A00CCB6CC /* View Class Files */,
+			);
+			name = "View Files";
+			sourceTree = "<group>";
+		};
+		51C780571C866BD900187129 /* View Categories */ = {
+			isa = PBXGroup;
+			children = (
+				51C780581C866CB200187129 /* UILabel+ChangeColor.h */,
+				51C780591C866CB200187129 /* UILabel+ChangeColor.m */,
+			);
+			name = "View Categories";
 			sourceTree = "<group>";
 		};
 		B5C9AB62FD3378EFEBF95B14 /* Frameworks */ = {
@@ -268,6 +289,7 @@
 			files = (
 				511EAB011C82405000CCB6CC /* ViewController.m in Sources */,
 				511EAB121C826C3700CCB6CC /* SlideshowContainer.m in Sources */,
+				51C7805A1C866CB200187129 /* UILabel+ChangeColor.m in Sources */,
 				511EAAFE1C82405000CCB6CC /* AppDelegate.m in Sources */,
 				511EAAFB1C82405000CCB6CC /* main.m in Sources */,
 				511EAB181C8272AB00CCB6CC /* Framer.m in Sources */,

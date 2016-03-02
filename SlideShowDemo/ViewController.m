@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "SlideshowContainer.h"
 #import "Framer.h"
+#import "UILabel+ChangeColor.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -40,6 +41,21 @@
         [self.view addSubview:_container.slideShow];
     }
 }
+
+
+
+
+
+- (void)viewWillAppear:(BOOL)animated {
+
+    _titleLabel.textColor = [UILabel initialTextColor];
+
+    //  Next, call function to animate color change on _titleLabel text.
+}
+
+
+
+
 
 
 - (void)viewDidLoad {
