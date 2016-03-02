@@ -14,13 +14,11 @@
 
 + (CGRect)frameForTitleLabel:(UILabel *)label {
 
-
     //  Make 'sizedToFit' call and set label's SIZE
     //  equal to that of the frame generated *by that method*
 
     CGRect labelFrame = label.frame;
     CGRect superFrame = label.superview.frame;
-    CGPoint superOrigin = superFrame.origin;
     CGSize superSize = superFrame.size;
 
     CGFloat superWidth = superSize.width;
@@ -30,23 +28,11 @@
     CGFloat labelOriginX = labelOrigin.x;
     CGFloat labelOriginY = labelOrigin.y;
 
-
-
-
-
-
-    CGFloat desiredOriginX = superWidth * .15f;
-
-
-
-
-
-    CGFloat desiredOriginY = superHeight * .06f;
-
+    CGFloat desiredOriginX = superWidth * .18f;
+    CGFloat desiredOriginY = superHeight * .08f;
 
     labelOriginX = labelOriginX == desiredOriginX ? labelOriginX :
                                                    desiredOriginX;
-
 
     labelOriginY = labelOriginY == desiredOriginY ? labelOriginY :
                                                    desiredOriginY;
@@ -58,25 +44,15 @@
 }
 
 
-
-
-
 + (CGSize)fittedSizeForLabel:(UILabel *)label {
 
     UILabel *dummyLabel = [UILabel new];
     dummyLabel.text = label.text;
     dummyLabel.font = label.font;
 
-
-
-
-
-
-
     NSLog(@"dummyLabel == %@", dummyLabel);
 
     [dummyLabel sizeToFit];
-
     CGSize actualLabelSize = label.frame.size;
     CGSize dummyLabelSize = dummyLabel.frame.size;
 
@@ -85,8 +61,6 @@
     else
         return dummyLabelSize;
 }
-
-
 
 
 + (CGRect)frameForContainer:(UIView *)container {
@@ -104,12 +78,17 @@
     CGFloat viewWidth = viewSize.width;
     CGFloat viewHeight = viewSize.height;
 
-    CGFloat desiredOriginX = superWidth * .15f;
+
+
+
+    CGFloat desiredOriginX = superWidth * .14f;
+
+
+
     CGFloat desiredOriginY = superHeight * .15f;
 
     CGFloat desiredWidth = superWidth - (desiredOriginX * 2);
     CGFloat desiredHeight = superHeight * .32f;
-
 
     CGFloat viewOriginX = viewOrigin.x;
     CGFloat viewOriginY = viewOrigin.y;
